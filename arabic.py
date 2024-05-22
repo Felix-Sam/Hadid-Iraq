@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 parser = StrOutputParser()
 
-api_key_groq = os.getenv('grok_api')
+# api_key_groq = os.getenv('grok_api')
+api_key_groq = st.secrets['grok_api']
 llm = ChatGroq(temperature=0, groq_api_key=api_key_groq, model_name="mixtral-8x7b-32768")
 
 
