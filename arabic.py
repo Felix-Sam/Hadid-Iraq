@@ -14,9 +14,7 @@ llm = ChatGroq(temperature=0, groq_api_key=api_key_groq, model_name="mixtral-8x7
 
 
 prompt_template = """
-            You are a very reputable arabic text summarizer, Your job is to
-            summarize this given arabic text {text} .
-
+            أنت ملخص نص عربي موثوق للغاية. مهمتك هي تلخيص النص المعطى إلى نص عربي فقط {text}.
             """
 prompt = PromptTemplate(
     input_variables=["text"], template=prompt_template
